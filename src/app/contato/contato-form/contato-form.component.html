@@ -1,0 +1,15 @@
+<form [formGroup]="formContato" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="name">Nome</label>
+    <input type="text" class="form-control" name="name" id="name" formControlName="name">
+
+    <label for="email">E-mail</label>
+    <input type="text" class="form-control" name="email" id="email" formControlName="email">
+
+    <label for="phone">Telefone</label>
+    <input type="text" class="form-control" name="phone" id="phone" formControlName="phone">
+  </div>
+
+  <input type="submit" class="btn btn-primary mt-4" value="Salvar">
+  <a href="#" class="btn btn-secondary mt-4 ml-2">Cancelar</a>
+</form>

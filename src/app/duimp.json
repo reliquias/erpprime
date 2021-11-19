@@ -1,0 +1,349 @@
+[
+  {
+    "status": "ATIVO",
+    "identificacao": {
+      "numero": "19BR00000004677",
+      "versao": "1",
+      "numeroItem": 1
+    },
+    "produto": {
+      "codigo": 10,
+      "versao": "1",
+      "cnpjRaiz": "00000000"
+    },
+    "caracterizacaoImportacao": {
+      "indicador": "IMPORTACAO_DIRETA",
+      "ni": "00000000000191"
+    },
+    "indicadorExportadorFabricante": {
+      "codigo": "EXPORTADOR_DIFERENTE_FABRICANTE"
+    },
+    "fabricante": {
+      "codigo": "2104",
+      "versao": "1",
+      "cnpjRaiz": "00000000",
+      "pais": {
+        "codigo": "BR"
+      }
+    },
+    "exportador": {
+      "codigo": "CN001",
+      "versao": "1",
+      "cnpjRaiz": "00000000",
+      "pais": {
+        "codigo": "BR"
+      }
+    },
+    "indicadorCompradorVendedor": {
+      "codigo": "NAO_HA_VINCULACAO"
+    },
+    "mercadoria": {
+      "tipoAplicacao": {
+        "codigo": "CONSUMO"
+      },
+      "condicao": "NOVA",
+      "unidadeComercial": "SACAS",
+      "quantidadeComercial": 100.5,
+      "quantidadeMedidaEstatistica": 12.12345,
+      "pesoLiquido": 100,
+      "moedaNegociada": {
+        "codigo": "USD"
+      },
+      "valorUnitarioMoedaNegociada": 10,
+      "descricao": "Texto de exemplo."
+    },
+    "condicaoVenda": {
+      "metodoValoracao": {
+        "codigo": 1
+      },
+      "incoterm": {
+        "codigo": "FOB",
+        "complemento": "1"
+      },
+      "valorBRL": 1,
+      "valorMoedaNegociada": 1,
+      "frete": {
+        "valorBRL": 12.4
+      },
+      "seguro": {
+        "valorBRL": 12.4
+      },
+      "acrescimosDeducoes": [
+        {
+          "tipo": "ACRESCIMO",
+          "moeda": {
+            "codigo": "USD",
+            "valor": 100.12
+          },
+          "valorBRL": 33.45,
+          "denominacao": {
+            "codigo": 1
+          }
+        }
+      ]
+    },
+    "lpcos": [
+      {
+        "numero": "I2000000063"
+      }
+    ],
+    "certificadoMercosul": [
+      {
+        "tipo": "CCPTC",
+        "numero": "PY-06000AA0000A-0001",
+        "quantidade": "1.12345"
+      }
+    ],
+    "documentosVinculados": [
+      {
+        "tipo": "DUE",
+        "numero": "19BR00000004936",
+        "numeroItem": 10001
+      }
+    ],
+    "dadosCambiais": {
+      "coberturaCambial": {
+        "codigo": "ATE_180_DIAS"
+      },
+      "numeroROF": "180A0A0A",
+      "instituicaoFinanciadora": {
+        "codigo": 99
+      },
+      "valorCoberturaCambial": "100.12",
+      "motivoSemCobertura": {
+        "codigo": 52
+      }
+    },
+    "atributos": [
+      {
+        "codigo": "ATT_0001",
+        "valor": "01011100"
+      }
+    ],
+    "tributos": {
+      "mercadoria": {
+        "valorLocalEmbarqueBRL": 20.666,
+        "valorAduaneiroBRL": 20.666
+      },
+      "tributosAplicados": [
+        {
+          "tributo": {
+            "codigo": "IPI"
+          },
+          "regime": {
+            "codigo": 1
+          },
+          "fundamento": {
+            "codigo": 1001
+          },
+          "atributos": [
+            {
+              "codigo": "ATT_0001",
+              "valor": "01011100"
+            }
+          ]
+        }
+      ],
+      "tributosCalculados": [
+        {
+          "tipo": "II",
+          "valoresBRL": {
+            "calculado": 1598.73,
+            "aReduzir": 165.7,
+            "devido": 16.7,
+            "suspenso": 16.7,
+            "aRecolher": 16.7
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1001,
+            "baseCalculoBRL": 4567.8,
+            "baseCalculoEspecificaBRL": 4567.8,
+            "baseCalculoReduzidaBRL": 4567.8,
+            "percentualReducaoBaseCalculo": 4567.8,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": 4227.8,
+            "valorAliquota": 4227.8,
+            "valorAliquotaEspecifica": 4227.8,
+            "valorAliquotaReduzida": 4227.8,
+            "normal": 4227.8,
+            "tributado": true
+          }
+        }
+      ]
+    }
+  },
+  {
+    "status": "ATIVO",
+    "identificacao": {
+      "numero": "19BR00000004677",
+      "versao": "1",
+      "numeroItem": 1
+    },
+    "produto": {
+      "codigo": 10,
+      "versao": "1",
+      "cnpjRaiz": "00000000"
+    },
+    "caracterizacaoImportacao": {
+      "indicador": "IMPORTACAO_DIRETA",
+      "ni": "00000000000191"
+    },
+    "indicadorExportadorFabricante": {
+      "codigo": "EXPORTADOR_DIFERENTE_FABRICANTE"
+    },
+    "fabricante": {
+      "codigo": "2104",
+      "versao": "1",
+      "cnpjRaiz": "00000000",
+      "pais": {
+        "codigo": "BR"
+      }
+    },
+    "exportador": {
+      "codigo": "CN001",
+      "versao": "1",
+      "cnpjRaiz": "00000000",
+      "pais": {
+        "codigo": "BR"
+      }
+    },
+    "indicadorCompradorVendedor": {
+      "codigo": "NAO_HA_VINCULACAO"
+    },
+    "mercadoria": {
+      "tipoAplicacao": {
+        "codigo": "CONSUMO"
+      },
+      "condicao": "NOVA",
+      "unidadeComercial": "SACAS",
+      "quantidadeComercial": 100.5,
+      "quantidadeMedidaEstatistica": 12.12345,
+      "pesoLiquido": 100,
+      "moedaNegociada": {
+        "codigo": "USD"
+      },
+      "valorUnitarioMoedaNegociada": 10,
+      "descricao": "Texto de exemplo."
+    },
+    "condicaoVenda": {
+      "metodoValoracao": {
+        "codigo": 1
+      },
+      "incoterm": {
+        "codigo": "FOB",
+        "complemento": "1"
+      },
+      "valorBRL": 1,
+      "valorMoedaNegociada": 1,
+      "frete": {
+        "valorBRL": 12.4
+      },
+      "seguro": {
+        "valorBRL": 12.4
+      },
+      "acrescimosDeducoes": [
+        {
+          "tipo": "ACRESCIMO",
+          "moeda": {
+            "codigo": "USD",
+            "valor": 100.12
+          },
+          "valorBRL": 33.45,
+          "denominacao": {
+            "codigo": 1
+          }
+        }
+      ]
+    },
+    "lpcos": [
+      {
+        "numero": "I2000000063"
+      }
+    ],
+    "certificadoMercosul": [
+      {
+        "tipo": "CCPTC",
+        "numero": "PY-06000AA0000A-0001",
+        "quantidade": "1.12345"
+      }
+    ],
+    "documentosVinculados": [
+      {
+        "tipo": "DUE",
+        "numero": "19BR00000004936",
+        "numeroItem": 10001
+      }
+    ],
+    "dadosCambiais": {
+      "coberturaCambial": {
+        "codigo": "ATE_180_DIAS"
+      },
+      "numeroROF": "180A0A0A",
+      "instituicaoFinanciadora": {
+        "codigo": 99
+      },
+      "valorCoberturaCambial": "100.12",
+      "motivoSemCobertura": {
+        "codigo": 52
+      }
+    },
+    "atributos": [
+      {
+        "codigo": "ATT_0001",
+        "valor": "01011100"
+      }
+    ],
+    "tributos": {
+      "mercadoria": {
+        "valorLocalEmbarqueBRL": 20.666,
+        "valorAduaneiroBRL": 20.666
+      },
+      "tributosAplicados": [
+        {
+          "tributo": {
+            "codigo": "IPI"
+          },
+          "regime": {
+            "codigo": 1
+          },
+          "fundamento": {
+            "codigo": 1001
+          },
+          "atributos": [
+            {
+              "codigo": "ATT_0001",
+              "valor": "01011100"
+            }
+          ]
+        }
+      ],
+      "tributosCalculados": [
+        {
+          "tipo": "II",
+          "valoresBRL": {
+            "calculado": 1598.73,
+            "aReduzir": 165.7,
+            "devido": 16.7,
+            "suspenso": 16.7,
+            "aRecolher": 16.7
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1001,
+            "baseCalculoBRL": 4567.8,
+            "baseCalculoEspecificaBRL": 4567.8,
+            "baseCalculoReduzidaBRL": 4567.8,
+            "percentualReducaoBaseCalculo": 4567.8,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": 4227.8,
+            "valorAliquota": 4227.8,
+            "valorAliquotaEspecifica": 4227.8,
+            "valorAliquotaReduzida": 4227.8,
+            "normal": 4227.8,
+            "tributado": true
+          }
+        }
+      ]
+    }
+  }
+]
+
