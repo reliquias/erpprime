@@ -20,7 +20,12 @@ export class ContactService {
   public postContacts(contato: FormData){
     console.log(contato);
     return this.http.post<Contato>(this.SERVER_URL, contato);
+  }
 
+
+  public remove(contatoId){
+    console.log(this.SERVER_URL + '/' +contatoId);
+    return this.http.delete(this.SERVER_URL + '/' +contatoId);
   }
 
 }

@@ -2,6 +2,7 @@ import { ContactService } from 'src/app/services/contact.service';
 import { Contato } from './../contato';
 import { Component, OnInit } from '@angular/core';
 import  {  FormsModule, FormBuilder,  FormGroup  }  from  '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contato-form',
@@ -11,7 +12,9 @@ import  {  FormsModule, FormBuilder,  FormGroup  }  from  '@angular/forms';
 export class ContatoFormComponent implements OnInit {
   formContato: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private contactService: ContactService) { }
+  constructor(private formBuilder: FormBuilder,
+    private contactService: ContactService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.createForm(new Contato());
@@ -26,7 +29,9 @@ export class ContatoFormComponent implements OnInit {
     })
 
     // chamando a função createForm para limpar os campos na tela
-    this.createForm(new Contato());
+    //this.createForm(new Contato());
+
+    this.router.navigate(['contatos']);
   }
 
   createForm(contato: Contato) {

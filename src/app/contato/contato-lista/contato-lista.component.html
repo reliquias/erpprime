@@ -4,7 +4,7 @@
       <h4>Contatos</h4>
     </div>
     <div class="float-right">
-      <button type="button" class="btn btn-primary"> Novo Contato</button>
+      <button type="button" class="btn btn-primary" (click)="novoContato()" >Novo Contato</button>
     </div>
   </div>
   <div class="card-body">
@@ -29,7 +29,7 @@
               <button class="btn btn-outline-warning mb-1 btn-sm">
                 Atualizar
               </button>
-              <button class="btn btn-outline-danger mb-1 btn-sm">
+              <button class="btn btn-outline-danger mb-1 btn-sm" (click)="remove(contato.id)">
                 Remover
               </button>
             </span>
