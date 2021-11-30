@@ -7,35 +7,5 @@
       <button type="button" class="btn btn-primary" (click)="novoContato()" >Novo Contato</button>
     </div>
   </div>
-  <div class="card-body">
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Name</th>
-          <th>E-mail</th>
-          <th>Phone</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let contato of contatos">
-          <td>{{contato.id}}</td>
-          <td>{{contato.name}}</td>
-          <td>{{contato.email}}</td>
-          <td>{{contato.phone}}</td>
-          <td>
-            <span class="float-right">
-              <button class="btn btn-outline-warning mb-1 btn-sm">
-                Atualizar
-              </button>
-              <button class="btn btn-outline-danger mb-1 btn-sm" (click)="remove(contato.id)">
-                Remover
-              </button>
-            </span>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <po-table [p-items]="contatos" [p-columns]="columns"> </po-table>
 </div>

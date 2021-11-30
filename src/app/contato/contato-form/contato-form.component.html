@@ -1,14 +1,11 @@
 <div class="card-body">
   <form [formGroup]="formContato" (ngSubmit)="onSubmit()">
     <div class="form-group">
-      <label for="name">Nome</label>
-      <input type="text" class="form-control" name="name" id="name" formControlName="name">
-
-      <label for="email">E-mail</label>
-      <input type="text" class="form-control" name="email" id="email" formControlName="email">
-
-      <label for="phone">Telefone</label>
-      <input type="text" class="form-control" name="phone" id="phone" formControlName="phone">
+      <div class="form-control">
+        <po-input name="name" id="name" formControlName="name" p-label="Nome"> </po-input>
+        <po-input name="email" id="email" formControlName="email" p-label="E-mail"> </po-input>
+        <po-input name="phone" id="phone" formControlName="phone" p-mask="(99) 9 9999-9999" p-label="Telefone"> </po-input>
+      </div>
     </div>
 
     <input type="submit" class="btn btn-primary mt-4" value="Salvar">

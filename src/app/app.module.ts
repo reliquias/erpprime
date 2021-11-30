@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavBarComponent } from './home/nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home/home.component';
+import { PoModule } from '@po-ui/ng-components';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HomeComponent } from './home/home/home.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    PoModule
   ],
   providers: [],
   bootstrap: [
