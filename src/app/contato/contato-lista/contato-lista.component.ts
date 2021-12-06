@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PoTableColumn} from '@po-ui/ng-components';
-import { Action } from 'rxjs/internal/scheduler/Action';
+import { PoDialogService, PoTableColumn} from '@po-ui/ng-components';
 
 import { ContactService } from 'src/app/services/contact.service';
 import { Contato } from '../contato';
@@ -22,29 +21,27 @@ export class ContatoListaComponent implements OnInit {
     { property: 'email', label: 'E-mail', width: '25%'},
     { property: 'phone', label: 'Phone', width: '25%'},
     { property: 'action', label: 'Action', type: 'icon', icons: [
-      { icon: 'po-icon-export', value: 'remove', action: this.remove.bind(this)}
+      { icon: 'po-icon-edit', value: 'edit', action: this.editarContato.bind(this)}
+      ,{ icon: 'po-icon-delete', value: 'remove', action: this.remove.bind(this)}
     ], width: '5%'}
   ];
 
-  constructor(private contactService: ContactService,
-    private router: Router) { }
+  constructor(private contactService: ContactService
+    ,private router: Router
+    ,private poAlert: PoDialogService)
+    {
+      this.getContatos();
+    }
 
-  ngOnInit(): void {
-    this.getContatos();
-  }
-
-  ngOnChanges() {
-    this.getContatos();
-  }
+  ngOnInit(): void {}
 
   getContatos(){
     this.contactService.getContacts().subscribe(
       (data) => {
         data.forEach(element => {
-          element['action'] = ['remove'];
+          element['action'] = ['edit', 'remove'];
         });
         this.contatos = data;
-        console.log(this.contatos);
       },
       (error) =>{
         console.log(error);
@@ -53,17 +50,30 @@ export class ContatoListaComponent implements OnInit {
   }
 
   novoContato(){
+    this.contactService.contatoSelecionado = new Contato();
       this.router.navigate(['newContato']);
   }
 
+  editarContato(contato: Contato){
+    this.contactService.contatoSelecionado = contato;
+    this.router.navigate(['newContato']);
+  }
+
   remove(contato: Contato){
-    this.contactService.remove(contato.id).subscribe(
-      (data) => {
-        this.getContatos();
-      },
-      (error) =>{
-        console.log(error);
+    this.poAlert.confirm({
+      literals: { cancel: 'Cancela', confirm: 'Confirma'},
+      title: 'Atenção!',
+      message: 'Deseja realmente remover o contato ' + contato.name + ' ?',
+      confirm: () => {
+        this.contactService.remove(contato.id).subscribe(
+          (data) => {
+            this.getContatos();
+          },
+          (error) =>{
+            console.log(error);
+          }
+        )
       }
-    )
+    });
   }
 }

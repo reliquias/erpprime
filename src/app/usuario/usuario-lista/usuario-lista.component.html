@@ -1,13 +1,13 @@
 <div class="card">
   <div class="card-header">
     <div class="float-left">
-      <h4>Contatos</h4>
+      <h4>Usuarios</h4>
     </div>
     <div class="float-right" style="flex: 1 1 auto;">
-      <button type="button" class="btn btn-primary botao-adicionar" (click)="novoContato()">
+      <button type="button" class="btn btn-primary botao-adicionar" (click)="novoUsuario()">
         <span class="po-icon po-icon-plus-circle"></span> Novo
       </button>
     </div>
   </div>
-  <po-table [p-items]="contatos" [p-columns]="columns"> </po-table>
+  <po-table [p-items]="usuarios" [p-columns]="columns"> </po-table>
 </div>

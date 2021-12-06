@@ -1,7 +1,7 @@
 import { ContactService } from 'src/app/services/contact.service';
 import { Contato } from './../contato';
 import { Component, OnInit } from '@angular/core';
-import  {  FormsModule, FormBuilder,  FormGroup  }  from  '@angular/forms';
+import  {  FormBuilder,  FormGroup, Validators  }  from  '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -17,26 +17,32 @@ export class ContatoFormComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-    this.createForm(new Contato());
+    this.createForm(this.contactService.contatoSelecionado);
   }
 
-  onSubmit() {
-    // aqui você pode implementar a logica para fazer seu formulário salvar
-    console.log(this.formContato.value);
-    this.contactService.postContacts(this.formContato.value)
+  adicionaOuAtualiza() {
+    if(this.formContato.value['id']){
+      this.contactService.putContacts(this.formContato.value, this.formContato.value['id'])
     .subscribe(data => {
       console.log(data.id);
     })
+    }else{
+      this.contactService.postContacts(this.formContato.value)
+      .subscribe(data => {
+        console.log(data.id);
+      })
+    }
+    this.contatosList();
+  }
 
-    // chamando a função createForm para limpar os campos na tela
-    //this.createForm(new Contato());
-
+  contatosList(){
     this.router.navigate(['contatos']);
   }
 
   createForm(contato: Contato) {
     this.formContato = this.formBuilder.group({
-      name: [contato.name],
+      id:[contato.id],
+      name: [contato.name, [Validators.required]],
       email:[contato.email],
       phone:[contato.phone]
     })
