@@ -5,4 +5,5 @@ export class Usuario {
   phone: string;
   password: string;
   token?: string;
+  roleUser: string;
 }
