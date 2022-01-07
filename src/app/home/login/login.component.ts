@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
             .subscribe(
                 data => {
                   console.log('logou caralho: ' + data);
-                  this.router.navigate(['home']);
+                  this.router.navigate(['contatos']);
                 },
                 error => {
                   this.errorsLogin = JSON.stringify(error);

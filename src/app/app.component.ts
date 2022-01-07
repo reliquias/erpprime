@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthService } from './services/auth.service';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'erpprime';
+
+
+constructor(private authenticationService: AuthService) { }
+
+logado(){
+  console.log(this.authenticationService.currentUserValue);
+  return this.authenticationService.currentUserValue != null;
 }
+
+
+}
+
+

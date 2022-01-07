@@ -24,4 +24,8 @@ export class NavBarComponent implements OnInit {
    return false;
   }
 
+  logado(){
+    return this.user != null;
+  }
+
 }
