@@ -23,7 +23,8 @@ export class UsuarioFormComponent implements OnInit {
 
   adicionaOuAtualiza() {
     if(this.formUsuario.value['id']){
-      this.usuarioService.putUsers(this.formUsuario.value, this.formUsuario.value['id'])
+      console.log('é update');
+      this.usuarioService.putUsers(this.formUsuario.value['id'], this.formUsuario.value)
     .subscribe(data => {
       console.log(data.id);
     })
@@ -41,13 +42,15 @@ export class UsuarioFormComponent implements OnInit {
   }
 
   createForm(usuario: Usuario) {
+    console.log('usuario.roleUser: ' + usuario.roleUser);
     this.formUsuario = this.formBuilder.group({
       id:[usuario.id],
       name: [usuario.name, [Validators.required]],
       email:[usuario.email],
       phone:[usuario.phone],
       password:[usuario.password],
-      confirmar:[usuario.password]
+      confirmar:[usuario.password],
+      roleUser:[usuario.roleUser]
     })
   }
 }

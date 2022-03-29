@@ -1,6 +1,6 @@
 {
   "/api/*": {
-    "target": "http://tr-84vdp13:8080",
+    "target": "http://tr-84vdp13:8081",
     "secure": false,
     "logLevel": "debug",
     "changeOrigin": true

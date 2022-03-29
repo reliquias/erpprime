@@ -13,6 +13,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" routerLink="/contatos" >Contatos</a></li>
+            <li><a class="dropdown-item" routerLink="/produtos" >Produtos</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown" *ngIf="hasRole('admin')">
@@ -24,10 +25,15 @@
           </ul>
         </li>
       </ul>
+      <ul class="nav navbar-nav" *ngIf="hasRole('admin') || hasRole('guest')">
+        <li><img src="https://img.icons8.com/external-sbts2018-mixed-sbts2018/58/000000/external-logout-social-media-basic-1-sbts2018-mixed-sbts2018.png" id="iconLogout" alt="Logout" (click)="logout()"/></li>
+      </ul>
+      <!--
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
+      -->
     </div>
   </div>
 </nav>

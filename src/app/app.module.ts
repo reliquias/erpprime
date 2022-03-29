@@ -15,6 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './home/login/login.component';
 import { UsuarioListaComponent } from './usuario/usuario-lista/usuario-lista.component';
 import { UsuarioFormComponent } from './usuario/usuario-form/usuario-form.component';
+import { ProdutoListaComponent } from './produto/produto-lista/produto-lista.component';
+import { ProdutoFormComponent } from './produto/produto-form/produto-form.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { UsuarioFormComponent } from './usuario/usuario-form/usuario-form.compon
     HomeComponent,
     LoginComponent,
     UsuarioListaComponent,
-    UsuarioFormComponent
+    UsuarioFormComponent,
+    ProdutoListaComponent,
+    ProdutoFormComponent
   ],
   imports: [
     BrowserModule,

@@ -19,6 +19,12 @@ export class AuthTokenInterceptor implements HttpInterceptor {
     if (currentUser && currentUser.token) {
         request = request.clone({
             setHeaders: {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Credentials": "true",
+                "Access-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE",
+                "Access-Control-Max-Age": "3600",
+                "Access-Control-Allow-Headers": "Content-Type, Accept, X-Requested-With, remember-me",
+                "Content-Type": "application/json",
                 Authorization: `Bearer ${currentUser.token}`
             }
         });

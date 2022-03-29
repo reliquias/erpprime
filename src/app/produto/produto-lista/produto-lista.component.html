@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-header">
+    <div class="float-left">
+      <h4>Produtos</h4>
+    </div>
+    <div class="float-right" style="flex: 1 1 auto;">
+      <button type="button" class="btn btn-primary botao-adicionar" (click)="novoProduto()">
+        <span class="po-icon po-icon-plus-circle"></span> Novo
+      </button>
+    </div>
+  </div>
+  <po-table [p-items]="produtos" [p-columns]="columns"> </po-table>
+</div>

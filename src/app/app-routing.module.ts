@@ -1,3 +1,5 @@
+import { ProdutoFormComponent } from './produto/produto-form/produto-form.component';
+import { ProdutoListaComponent } from './produto/produto-lista/produto-lista.component';
 import { RoleGuardService } from './services/role-guard.service';
 import { UsuarioFormComponent } from './usuario/usuario-form/usuario-form.component';
 import { UsuarioListaComponent } from './usuario/usuario-lista/usuario-lista.component';
@@ -18,6 +20,22 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
+    path: 'usuarios',
+    component: UsuarioListaComponent,
+    canActivate: [RoleGuardService],
+    data: { roles: ['admin'] }
+  },
+  {
+    path: 'newUsuario',
+    component: UsuarioFormComponent,
+    canActivate: [RoleGuardService],
+    data: { roles: ['admin'] }
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
     path: 'contatos',
     component: ContatoListaComponent,
     canActivate: [RoleGuardService],
@@ -30,17 +48,18 @@ const routes: Routes = [
     data: { roles: ['guest', 'admin', 'user'] }
   },
   {
-    path: 'usuarios',
-    component: UsuarioListaComponent,
+    path: 'produtos',
+    component: ProdutoListaComponent,
     canActivate: [RoleGuardService],
-    data: { roles: ['admin'] }
+    data: { roles: ['guest', 'admin', 'user'] }
   },
   {
-    path: 'newUsuario',
-    component: UsuarioFormComponent,
+    path: 'newProduto',
+    component: ProdutoFormComponent,
     canActivate: [RoleGuardService],
-    data: { roles: ['admin'] }
-  }
+    data: { roles: ['guest', 'admin', 'user'] }
+  },
+
 ];
 
 @NgModule({

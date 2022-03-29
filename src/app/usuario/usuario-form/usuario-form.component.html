@@ -10,6 +10,15 @@
         <po-password name="password" id="password" formControlName="password" p-label="Senha"> </po-password>
         <po-password name="confirmar" id="confirmar" formControlName="confirmar" p-label="Confirmar Senha"> </po-password>
 
+        <po-select name="roleUser" id="roleUser" formControlName="roleUser" p-label="Permissão"
+          [p-options]=
+            "[
+              { label: 'guest', value: 'guest' },
+              { label: 'admin', value: 'admin' },
+              { label: 'user', value: 'user' }
+            ]"
+        ></po-select>
+
       </div>
     </div>
 

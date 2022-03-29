@@ -24,7 +24,7 @@ export class UsuarioService {
     return this.http.post<Usuario>(this.SERVER_URL, usuario);
   }
 
-  public putUsers(usuario: FormData, usuarioId){
+  public putUsers(usuarioId, usuario: FormData){
     return this.http.put<Usuario>(this.SERVER_URL+'/'+ usuarioId, usuario);
   }
 

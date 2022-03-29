@@ -16,10 +16,10 @@ export class AuthService {
   private readonly SERVER_URL = `${environment.API}authenticate`;
 
 
-    constructor(private http: HttpClient) {
-        this.currentUserSubject = new BehaviorSubject<Usuario>(JSON.parse(localStorage.getItem('currentUser')));
-        this.currentUser = this.currentUserSubject.asObservable();
-    }
+  constructor(private http: HttpClient) {
+    this.currentUserSubject = new BehaviorSubject<Usuario>(JSON.parse(localStorage.getItem('currentUser')));
+    this.currentUser = this.currentUserSubject.asObservable();
+  }
 
     public get currentUserValue(): Usuario {
         return this.currentUserSubject.value;
@@ -40,6 +40,8 @@ export class AuthService {
         localStorage.removeItem('currentUser');
         this.currentUserSubject.next(null);
     }
+
+
 
   public postSignin(login: FormData){
     return this.http.post(this.SERVER_URL, login);

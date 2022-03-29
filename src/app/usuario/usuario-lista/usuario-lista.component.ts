@@ -28,7 +28,6 @@ export class UsuarioListaComponent implements OnInit {
     { property: 'phone', label: 'Phone', width: '25%'},
     { property: 'action', label: 'Action', type: 'icon', icons: [
       { icon: 'po-icon-edit', value: 'edit', action: this.editarUsuario.bind(this)}
-      ,{ icon: 'po-icon-delete', value: 'remove', action: this.remove.bind(this)}
     ], width: '5%'}
   ];
 

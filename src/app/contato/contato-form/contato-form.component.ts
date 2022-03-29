@@ -12,7 +12,8 @@ import { Router } from '@angular/router';
 export class ContatoFormComponent implements OnInit {
   formContato: FormGroup;
 
-  constructor(private formBuilder: FormBuilder,
+  constructor(
+    private formBuilder: FormBuilder,
     private contactService: ContactService,
     private router: Router) { }
 

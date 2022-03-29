@@ -1,0 +1,19 @@
+<div class="card-body">
+  <form [formGroup]="formProduto">
+    <div class="form-group">
+      <div class="form-control">
+        <input type="hidden" name="id" id="id" formControlName="id"/>
+        <po-input name="codigo" id="codigo" formControlName="codigo" p-label="Codigo" p-required="true"> </po-input>
+        <po-input name="nome" id="nome" formControlName="nome" p-label="Nome"> </po-input>
+        <po-input name="descricao" id="descricao" formControlName="descricao" p-label="Descriçãp"> </po-input>
+        <po-input name="preco" id="preco" formControlName="preco" p-mask="\^(\d{1,3}(\.\d{3})*|\d+)(\,\d{2})?$\" p-label="Preço"></po-input>
+        <po-input name="quantidade" id="quantidade" formControlName="quantidade" p-label="Quantidade"></po-input>
+      </div>
+    </div>
+
+    <div>
+      <button type="button" class="btn btn-primary" (click)="adicionaOuAtualiza()" [disabled]="!formProduto.valid">Salvar</button>
+      <button type="button" class="btn btn-secondary" (click)="produtosList()">Cancelar</button>
+    </div>
+  </form>
+</div>

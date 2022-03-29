@@ -4,7 +4,7 @@
 
 export const environment = {
   production: true,
-  API: 'http://tr-84vdp13:8080/api/'
+  API: 'http://tr-84vdp13:8081/api/'
 };
 
 /*
