@@ -17,6 +17,8 @@ import { UsuarioListaComponent } from './usuario/usuario-lista/usuario-lista.com
 import { UsuarioFormComponent } from './usuario/usuario-form/usuario-form.component';
 import { ProdutoListaComponent } from './produto/produto-lista/produto-lista.component';
 import { ProdutoFormComponent } from './produto/produto-form/produto-form.component';
+import { ClienteListaComponent } from './cliente/cliente-lista/cliente-lista.component';
+import { ClienteFormComponent } from './cliente/cliente-form/cliente-form.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { ProdutoFormComponent } from './produto/produto-form/produto-form.compon
     UsuarioListaComponent,
     UsuarioFormComponent,
     ProdutoListaComponent,
-    ProdutoFormComponent
+    ProdutoFormComponent,
+    ClienteListaComponent,
+    ClienteFormComponent
   ],
   imports: [
     BrowserModule,

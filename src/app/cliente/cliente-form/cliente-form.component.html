@@ -1,0 +1,30 @@
+<div class="card-body">
+  <form [formGroup]="formCliente">
+    <div class="form-group">
+      <div class="form-control">
+        <input type="hidden" name="id" id="id" formControlName="id"/>
+        <label>Código:
+          <input name="codigo" id="codigo" formControlName="codigo" p-label="Codigo" p-required="true">
+        </label>
+        <br><br>
+        <label>Nome:
+          <input name="nome" id="nome" formControlName="name" p-label="Nome">
+        </label>
+        <br><br>
+        <label>E-mail:
+          <input name="email" id="email" formControlName="email" p-label="E-mail">
+        </label>
+        <br><br>
+        <label>Telefone:
+          <input name="phone" id="phone" formControlName="phone" p-label="Telefone">
+        </label>
+
+      </div>
+    </div>
+
+    <div>
+      <button type="button" class="btn btn-primary" (click)="adicionaOuAtualiza()" [disabled]="!formCliente.valid">Salvar</button>
+      <button type="button" class="btn btn-secondary" (click)="clientesList()">Cancelar</button>
+    </div>
+  </form>
+</div>

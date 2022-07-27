@@ -1,0 +1,36 @@
+<div class="card">
+  <div class="card-header">
+    <div class="float-left">
+      <h4>Clientes</h4>
+    </div>
+    <div class="float-right" style="flex: 1 1 auto;">
+      <button type="button" class="btn btn-primary botao-adicionar" (click)="novoCliente()">
+        <span class="po-icon po-icon-plus-circle"></span> Novo
+      </button>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <td>Código</td>
+      <td>Nome</td>
+      <td>E-mail</td>
+      <td>Telefone</td>
+      <td>Action</td>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of clientes">
+        <td>{{c.codigo}}</td>
+        <td>{{c.name}}</td>
+        <td>{{c.email}}</td>
+        <td>{{c.phone}}</td>
+        <td>
+          <div>
+            <button (click)="editar(c)">Edit</button>
+            <button (click)="remove(c)">Delete</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

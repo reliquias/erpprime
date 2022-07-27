@@ -1,3 +1,5 @@
+import { ClienteFormComponent } from './cliente/cliente-form/cliente-form.component';
+import { ClienteListaComponent } from './cliente/cliente-lista/cliente-lista.component';
 import { ProdutoFormComponent } from './produto/produto-form/produto-form.component';
 import { ProdutoListaComponent } from './produto/produto-lista/produto-lista.component';
 import { RoleGuardService } from './services/role-guard.service';
@@ -59,7 +61,18 @@ const routes: Routes = [
     canActivate: [RoleGuardService],
     data: { roles: ['guest', 'admin', 'user'] }
   },
-
+  {
+    path: 'clientes',
+    component: ClienteListaComponent,
+    canActivate: [RoleGuardService],
+    data: { roles: ['guest', 'admin', 'user'] }
+  },
+  {
+    path: 'newCliente',
+    component: ClienteFormComponent,
+    canActivate: [RoleGuardService],
+    data: { roles: ['guest', 'admin', 'user'] }
+  },
 ];
 
 @NgModule({

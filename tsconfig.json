@@ -9,8 +9,8 @@
     "outDir": "./dist",
     "rootDir": "./src",
     /* Experimental Options */
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
+    /*"experimentalDecorators": true,
+    "emitDecoratorMetadata": true,*/
     /* Advanced Options */
     "forceConsistentCasingInFileNames": true
   },
